@@ -5,12 +5,24 @@
 //Nan == false
 //false == false
 
-let name = false;
+// let name = false;
 
-if (name){
-    console.log("The condition is True")
-}
+// if (name){
+//     console.log("The condition is True")
+// }
 
-else{
-    console.log("The Condition is False")
-}
+// else{
+//     console.log("The Condition is False")
+// }
+
+// const userName = false;
+
+// if (userName){
+//     console.log("ConditIon is True")
+// }
+
+// else{
+//     console.log("Condition is False");
+
+// }
+
