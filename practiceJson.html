@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to JSON</title>
+</head>
+
+<body>
+    <h1>JSON</h1>
+    <h2>JavaScript Object Notation</h2>
+    <ul id="name-Container"></ul>
+    <ul></ul>
+
+    <script>
+
+        //normal Json Start
+        // const user = {
+        //     name : ["arafat", "Seba", "amma"],
+        //     id : 20, 
+        //     address : {
+        //         vill : "gomastapur ",
+        //         PS : "Gomastapur",
+        //         dist : "Chapai Nawabgonj"
+        //     }
+        // };
+        // const userJson = JSON.stringify(user);
+        // console.log(userJson);
+        // const userJsonObject = JSON.parse(userJson);
+        // console.log(userJsonObject);
+
+        //JSON Data upload in website (Json PlaceHolder)
+
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(json => displayData(json))
+
+
+        function displayData(users) {
+            const userNames = users.map(user => user.username);
+            const ul = document.getElementById('name-Container');
+            for (let i = 0; i < userNames.length; i++) {
+                const userJson = userNames[i];
+                const li = document.createElement("li");
+                li.innerText = userJson;
+                ul.appendChild(li);
+            }
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
